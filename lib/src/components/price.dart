@@ -19,12 +19,25 @@ class Price extends StatelessWidget {
               offset: Offset(0, 8),
             )
           ]),
-      child: Text(
-        "Try it free 7 days then \n$price/mo. thereafter",
-        style: const TextStyle(
-          color: Colors.white,
-        ),
+      child: RichText(
         textAlign: TextAlign.center,
+        text: TextSpan(children: [
+          const TextSpan(
+            text: "Try it free 7 days ",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+          TextSpan(
+            text: "then \n$price/mo. thereafter",
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+            ),
+          )
+        ]),
       ),
     );
   }

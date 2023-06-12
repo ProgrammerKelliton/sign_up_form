@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 
 // Components
 import "package:sign_up_form/src/components/background.dart";
+import "package:sign_up_form/src/components/form_new_user.dart";
 import "package:sign_up_form/src/components/introduction.dart";
 import "package:sign_up_form/src/components/price.dart";
 
@@ -23,7 +24,7 @@ class HomeScreen extends StatelessWidget {
           const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              Spacer(flex: 2),
               Introduction(
                 title: "Learn to code by watching others",
                 subTitle:
@@ -31,6 +32,8 @@ class HomeScreen extends StatelessWidget {
               ),
               Spacer(),
               Price(price: 20),
+              Spacer(),
+              FormNewUser(),
               Spacer(),
             ],
           )
