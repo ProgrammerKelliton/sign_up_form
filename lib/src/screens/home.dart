@@ -4,12 +4,7 @@ import "package:flutter/material.dart";
 // Components
 import "package:sign_up_form/src/components/background.dart";
 import "package:sign_up_form/src/components/introduction.dart";
-
-// Development
-import "dart:developer" show log;
-
-// Utils
-import "package:sign_up_form/src/utils/get_content.dart";
+import "package:sign_up_form/src/components/price.dart";
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,18 +13,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
-    getContent("introduction", "title").then((value) => log(value.toString()));
-
     return Scaffold(
       body: Stack(
+        alignment: AlignmentDirectional.center,
         children: [
           Background(
             screenSize: screenSize,
           ),
-          const Introduction(
-            title: "Learn to code by watching others",
-            subTitle:
-                "See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.",
+          const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Spacer(),
+              Introduction(
+                title: "Learn to code by watching others",
+                subTitle:
+                    "See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.",
+              ),
+              Spacer(),
+              Price(price: 20),
+              Spacer(),
+            ],
           )
         ],
       ),

@@ -9,29 +9,30 @@ class Introduction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        SizedBox(
-          width: 300,
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      SizedBox(
+        width: 300,
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 25,
+            fontWeight: FontWeight.w700,
           ),
         ),
-        Text(
+      ),
+      SizedBox(
+        width: 350,
+        child: Text(
           subTitle,
           textAlign: TextAlign.center,
           style: const TextStyle(
             color: Colors.white,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
           ),
-        )
-      ]),
-    );
+        ),
+      )
+    ]);
   }
 }
